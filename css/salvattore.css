@@ -1,0 +1,75 @@
+/*
+   Spezific styling for salvattore
+   Feel free to edit it as you like
+   More info at http://salvattore.com
+ */
+
+/* Base styles */
+.column { float: left; }
+
+@media screen and (max-width: 480px) {
+.column { float: none; position: relative; clear: both; }
+}
+.size-1of4 { width: 25%; }
+.size-1of3 { width: 33.333%; }
+.size-1of2 { width: 50%; }
+#fh5co-board[data-columns]::before { content: '4 .column.size-1of4';display:none; }
+
+/* Configurate salvattore with media queries */
+@media screen and (max-width: 450px) {
+#fh5co-board[data-columns]::before { content: '1 .column';display:none; }
+}
+
+@media screen and (min-width: 451px) and (max-width: 700px) {
+#fh5co-board[data-columns]::before { content: '2 .column.size-1of2';display:none; }
+}
+
+@media screen and (min-width: 701px) and (max-width: 850px) {
+#fh5co-board[data-columns]::before { content: '3 .column.size-1of3'; display:none;}
+}
+
+@media screen and (min-width: 851px) {
+#fh5co-board[data-columns]::before { content: '4 .column.size-1of4'; display:none;}
+}
+/*增加样式*/
+.app-tit{
+       font-family: "微软雅黑";
+    padding:0 0 0 10px;
+    margin: 0;
+    font-size: 70px;
+    color: #f54414;
+    font-weight:100;
+    padding:0 0 40px 0;
+}
+.app-tit2{
+    padding-top: 20px;
+}
+#fh5co-main{
+position;position: relative;
+}
+/*回到顶部*/
+.ringht-nav-warp{
+    position: fixed;
+    top:10px;
+    right: 0px;
+    width: 40px;
+    z-index: 900;
+    height: 100%;
+
+}
+.ringht-nav-warp>.right-nav{
+    position: absolute;
+    top:70px;
+    right: 30px;
+    width: 40px;
+    height:30px;
+    background: url(../images/top.png);
+}
+.ringht-nav-warp>.right-bottom{
+    position: absolute;
+    bottom:40px;
+    right: 30px;
+    width: 40px;
+    height:30px;
+    background: url(../images/home.png);
+}
